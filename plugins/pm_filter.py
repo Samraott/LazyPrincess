@@ -83,6 +83,17 @@ async def next_page(bot, query):
             for file in files
         ]
 
+    btn.insert(0,
+            [
+                InlineKeyboardButton("WEB SERIES", url="https://t.me/samraott1234"),
+                InlineKeyboardButton("18+", url="https://t.me/+RbGkJSzAdzM5N2Rl")
+            ])
+
+    btn.insert(0, [
+        InlineKeyboardButton("👉KAISE KAREIN DOWNLOAD👈", url="https://youtu.be/KAXxaB1j_dE")
+    ])
+
+
     if 0 < offset <= 10:
         off_set = 0
     elif offset == 0:
@@ -661,6 +672,17 @@ async def auto_filter(client, msg, spoll=False):
             for file in files
         ]
 
+    btn.insert(0,
+            [
+                InlineKeyboardButton("WEB SERIES", url="https://t.me/samraott1234"),
+                InlineKeyboardButton("18+", url="https://t.me/+RbGkJSzAdzM5N2Rl")
+            ])
+
+    btn.insert(0, [
+        InlineKeyboardButton("👉KAISE KAREIN DOWNLOAD👈", url="https://youtu.be/KAXxaB1j_dE")
+    ])
+
+
     if offset != "":
         key = f"{message.chat.id}-{message.id}"
         BUTTONS[key] = search
@@ -764,7 +786,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist))  # removing duplicates
     if not movielist:
-        k = await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @discussion_groupp ")
+        k = await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @Priyanka_samrottbot ")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -776,7 +798,7 @@ async def advantage_spell_chok(msg):
         )
     ] for k, movie in enumerate(movielist)]
     btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @discussion_groupp ",
+    await msg.reply("Hey Sona! Mujhe is naam se koi movie nhi mili, Mujhe lgta hai ki aapne spelling galat likh dii h 🤷‍♀️!\nPlease check your spelling once again 🤦‍♀️... or \n Discuss your problem with our admin here 👉 @Priyanka_samrottbot ",
                     reply_markup=InlineKeyboardMarkup(btn))
 
 
